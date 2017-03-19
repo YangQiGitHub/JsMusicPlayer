@@ -1,0 +1,213 @@
+html,body{
+	height: 100%;
+	font-family: Arial, sans-serif;
+	background: rgba(10, 40, 20, 0.5);
+	color: rgba(255, 255, 255, .5);
+}
+
+/*header Start*/
+header{
+	box-sizing: border-box;
+	height: 14%;
+	padding: 0.625rem 0 0;
+	/*min-height: 78px;*/
+	min-height: 2.4375rem;
+	text-align: center;
+}
+header .song-title{
+	width: 100%;
+	font-size: 0.625rem;
+	color: #fff;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+header .singer{
+	width: 100%;
+	font-size: 0.5rem;
+	margin-top: 0.25rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/*header End*/
+
+/*content Start*/
+.content{
+	box-sizing: border-box;
+	width: 100%;
+	height: 60%;
+	/*min-height: 260px*/
+	min-height: 8.125rem;
+	overflow: hidden;
+}
+.content .record-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.content .mid{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.content .record-bg{
+	/*width: 250px;*/
+	width: 7.8125rem;
+	height: 7.8125rem;
+	border: 0.1875rem solid rgba(245, 245, 245, 0.2);
+	border-radius: 50%;
+	background-image: url(../img/bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.content .record-pic{
+	/*width: 180px;*/
+	width: 5.625rem;
+	height: 5.625rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.content .record-pic img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.content .lyrics-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.lyrics-wrapper .lyrics{
+	position: absolute;
+	width: 100%;
+	transition: top 0.5s;
+	text-align: center;
+}
+.lyrics-wrapper .lyrics li{
+	/*padding: 8px 8px;*/
+	padding: 0.25rem 0.25rem;
+	/*font-size: 14px;*/
+	font-size: 0.4375rem;
+}
+.lyrics-wrapper .lyrics li.active{
+	color: #fff;
+}
+
+
+/*content End*/
+
+/*footer Start*/
+footer{
+	box-sizing: border-box;
+	height: 26%;
+	width: 100%;
+	/*min-height: 126px;*/
+	min-height: 3.9375rem;
+}
+footer .channel{
+	text-align: center;
+	font-size: 0.5rem;
+	/*line-height: 20px;*/
+	line-height: 0.625rem;
+}
+.progress-bar{
+	position: relative;
+	/*height: 4px;*/
+	height: 0.125rem;
+	/*width: 250px;*/
+	width: 7.8125rem;
+	/*width: 8.75rem;*/
+	border-radius: 0.0625rem;
+	background: rgba(255,255,255, 0.4);
+	/*margin: 14px auto 20px;*/
+	margin: 0.4375rem auto 0.625rem;
+}
+.progress{
+	height: 100%;
+	width: 0;
+	background: red;
+	border-radius: 0.0625rem;
+}
+.progress-btn{
+	position: absolute;
+	left: 0;
+	top: -0.09375rem;
+	/*width: 16px;*/
+	width: 0.5rem;
+	height: 0.375rem;
+	margin-left: -0.25rem;
+	background: #fff;
+	border-radius: 0.125rem;
+}
+
+.btns{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 0.625rem;
+}
+.icon-sides{
+	/*width: 20px*/
+	width: 0.625rem;
+	height: 0.625rem;
+	background-size: 100% 100%;
+}
+.icon-middle{
+	width: 0.9375rem;
+	height: 0.9375rem;
+	border-radius: 50%;
+	background-size: 100% 100%;
+}
+.play{
+	width: 1.5625rem;
+	height: 1.5625rem;
+	border-radius: 50%;
+	background-size: 100% 100%;
+	background-image: url(../img/暂停.png);
+}
+.change-channel{
+	background-image: url(../img/唱片.png);
+}
+.next{
+	background-image: url(../img/快进.png);
+}
+.show-lyrics{
+	background-image: url(../img/列表.png);
+}
+.mode{
+	background-image: url(../img/随机.png);
+}
+/*footer End*/
+
+.rotate{
+	animation: recordRotate 30s linear 1s infinite;
+}
+
+@keyframes recordRotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* 全局背景 */
+.glass{
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*background: blue;*/
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+.glass img{
+	width: 100%;
+	height: 100%;
+	filter: blur(20px);
+}
